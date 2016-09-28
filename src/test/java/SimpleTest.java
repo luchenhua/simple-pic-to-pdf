@@ -5,12 +5,17 @@ import java.io.IOException;
 
 public class SimpleTest {
 
-    public static final String DEST = "results/images/multiple_images.pdf";
+    public static final String DEST = "src/main/resources/images/multiple_images.pdf";
+
+    public static final String[] IMAGES = {
+            "src/main/resources/images/berlin2013.jpg",
+            "src/main/resources/images/javaone2013.jpg"
+    };
 
     public static void main(String[] args) throws IOException, DocumentException {
 
         File file = new File(DEST);
         file.getParentFile().mkdirs();
-        new ImgToPdf().createPdf(DEST);
+        new ImgToPdf().createPdf(IMAGES, DEST);
     }
 }

@@ -8,21 +8,15 @@ import java.io.IOException;
 
 public class ImgToPdf {
 
-    public static final String[] IMAGES = {
-            "resources/images/berlin2013.jpg",
-            "resources/images/javaone2013.jpg",
-            "resources/images/map_cic.png"
-    };
+    public void createPdf(String[] source, String dest) throws IOException, DocumentException {
 
-    public void createPdf(String dest) throws IOException, DocumentException {
-
-        Image img = Image.getInstance(IMAGES[0]);
+        Image img = Image.getInstance(source[0]);
         Document document = new Document(img);
         PdfWriter.getInstance(document, new FileOutputStream(dest));
 
         document.open();
 
-        for (String image : IMAGES) {
+        for (String image : source) {
             img = Image.getInstance(image);
             document.setPageSize(img);
             document.newPage();
