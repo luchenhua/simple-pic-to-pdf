@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class SimpleTest {
 
-    public static final String DEST = "src/main/resources/images/multiple_images.pdf";
+    public static final String DEST = "src/main/resources/pdf/multiple_images.pdf";
 
     public static final String[] IMAGES = {
             "src/main/resources/images/berlin2013.jpg",
