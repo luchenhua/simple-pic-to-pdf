@@ -9,20 +9,25 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ImgToPdf {
+public final class ImgToPdf {
 
-    public void createPdf(String[] source, String dest) throws IOException, DocumentException {
+    private ImgToPdf() {
+    }
 
-        File file = new File(dest);
-        file.getParentFile().mkdirs();
+    public static void createPdf(final String[] source, final String dest) throws IOException, DocumentException {
+
+        final File file = new File(dest);
+        if (file.getParentFile().mkdirs() || source.length == 0) {
+            return;
+        }
 
         Image img = Image.getInstance(source[0]);
-        Document document = new Document(img);
+        final Document document = new Document(img);
         PdfWriter.getInstance(document, new FileOutputStream(dest));
 
         document.open();
 
-        for (String image : source) {
+        for (final String image : source) {
             img = Image.getInstance(image);
             document.setPageSize(PageSize.A4);
             document.newPage();

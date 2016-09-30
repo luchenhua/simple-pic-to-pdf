@@ -12,6 +12,6 @@ public class SimpleTest {
                 "src/main/resources/images/javaone2013.jpg"
         };
 
-        new ImgToPdf().createPdf(images, dest);
+        ImgToPdf.createPdf(images, dest);
     }
 }
