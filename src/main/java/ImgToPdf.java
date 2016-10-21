@@ -1,8 +1,4 @@
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.PageSize;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.File;
@@ -32,7 +28,7 @@ public final class ImgToPdf {
             document.setPageSize(PageSize.A4);
             document.newPage();
             img.setAlignment(Element.ALIGN_CENTER);
-            img.scalePercent(100f);
+            img.scalePercent(80f);
             document.add(img);
         }
 

@@ -8,8 +8,8 @@ public class SimpleTest {
 
         String dest = "src/main/resources/pdf/multiple_images.pdf";
         String[] images = {
-                "src/main/resources/images/berlin2013.jpg",
-                "src/main/resources/images/javaone2013.jpg"
+                "http://a4.files.theultralinx.com/image/upload/c_fit,cs_srgb,w_620/MTQyMTEwNDY2NzI0OTMwNzI3.png",
+                "http://a4.files.theultralinx.com/image/upload/c_fit,cs_srgb,dpr_1.0,q_80,w_620/MTQyMTEwNDY2NDU2ODg4NDg4.jpg"
         };
 
         ImgToPdf.createPdf(images, dest);
