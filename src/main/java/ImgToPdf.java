@@ -28,7 +28,7 @@ public final class ImgToPdf {
             document.setPageSize(PageSize.A4);
             document.newPage();
             img.setAlignment(Element.ALIGN_CENTER);
-            img.scalePercent(80f);
+            img.scaleToFit(PageSize.A4);
             document.add(img);
         }
 
